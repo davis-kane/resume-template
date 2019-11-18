@@ -1,0 +1,122 @@
+@import 'config';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  background: #fff;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+// Navbar
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem 2rem;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  top: 0;
+  opacity: 0.9;
+  background: #333;
+
+  ul {
+      display: flex;
+  }
+
+  a {
+      color: #fff;
+      padding: 0.45rem;
+      margin: 0 0.25rem;
+
+      &:hover {
+          color: blue;
+      }
+  }
+}
+
+.landing {
+  background-image: url(/dist/img/header2.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  &-inner {
+    color: #333;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .showcase-title {
+    font-size: 4em;
+  }
+  span {
+    color: #d24e57;
+  }
+}
+
+// Featured Work
+
+.featured-work {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding: 2em 4em;
+  margin: auto;
+  max-width: 1440px;
+  @media screen and (max-width: $small) {
+    flex-direction: column;
+    padding: 0;
+  }
+  .fw-desc {
+    padding: 1em;
+  }
+}
+
+// Featured Projects
+
+$spaceamounts: (1,2,3,4,5);
+
+@each $space in $spaceamounts {
+
+    // All around margin
+    .fw-#{$space} {
+        margin: .5em;
+        background: $gray;
+        h3 {
+          color: $accent;
+        }
+        @media screen and (max-width: $xsmall) {
+          flex-direction: column;
+          margin-top: 1em;
+        }
+    }
+
+    // 
+
+}
