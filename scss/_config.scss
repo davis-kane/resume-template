@@ -12,3 +12,12 @@ $max-width: 1100px;
 $main: #333;
 $accent:#d24e57;
 $gray: rgb(243, 243, 243);
+
+// Fonts 
+
+$header: 'Oswald', sans-serif;
+$body: 'Open Sans', sans-serif;
+
+.fa {
+    color: $accent;
+}
