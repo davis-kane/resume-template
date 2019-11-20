@@ -1,0 +1,20 @@
+.info-card {
+    display: grid;
+    grid-template-columns: 150px 1fr 1fr 1fr;
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    width: 80%;
+    margin: auto;
+    background: $gray;
+    padding: 3em;
+
+    .info-about {
+        grid-column: 3 / 5;
+        grid-row: 1 / span 3;
+    }
+
+    .info-skill {
+        grid-column: 1 / span 3;
+        grid-row: 2;
+    }
+}
